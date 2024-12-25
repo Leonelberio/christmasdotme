@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React, { useState, useEffect } from "react";
 import html2canvas from "html2canvas";
 import Confetti from "react-confetti";
-import Image from "next/image";
+
 
 type TemplateKey = "template1" | "template2" | "template3" | "template4";
 
@@ -39,7 +40,7 @@ const ChristmasCard = () => {
 
       if (timeDiff > 0) {
         const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-        setTimeLeft(`${days} jours avant Noël ! 🎅`);
+        setTimeLeft(${days} jours avant Noël ! 🎅);
       } else {
         setTimeLeft("Joyeux Noël ! 🎄");
       }
@@ -67,7 +68,7 @@ const ChristmasCard = () => {
       const seconds = Math.floor((timeDiff / 1000) % 60);
 
       setTimeToMidnight(
-        `Il reste ${hours}h ${minutes}m ${seconds}s pour tes souhaits ✨`
+        Il reste ${hours}h ${minutes}m ${seconds}s pour tes souhaits ✨
       );
     }, 1000);
 
@@ -84,7 +85,7 @@ const ChristmasCard = () => {
 
     if (preview) {
       html2canvas(preview, {
-        scale: 1,
+        scale: 2,
         useCORS: true, // Allow cross-origin images
         allowTaint: true, // Prevent image tainting
       }).then((canvas) => {
@@ -312,7 +313,7 @@ Créez aussi votre carte personnalisée pour vos amis sur : https://christmas.le
                 onChange={(e) => setTemplate(e.target.value as TemplateKey)}
                 className="accent-red-500"
               />
-              <span>{`Modèle ${key.slice(-1)}`}</span>
+              <span>{Modèle ${key.slice(-1)}}</span>
             </label>
           ))}
         </div>
@@ -355,12 +356,10 @@ Créez aussi votre carte personnalisée pour vos amis sur : https://christmas.le
         className="relative mt-8 max-w-md w-full bg-black overflow-hidden shadow-xl"
         style={{ aspectRatio: "1 / 1" }}
       >
-        <Image
+        <img
           src={currentTemplate.image}
           alt="Christmas Background"
-          className="w-full h-full object-cover"
-          width={1000}
-          height={1000}
+          className="w-full h-full object-cover"   
         />
 
         {/* Name Overlay */}
@@ -379,8 +378,20 @@ Créez aussi votre carte personnalisée pour vos amis sur : https://christmas.le
           </div>
         )}
       </div>
+      <footer className="bg-gray-900 text-white py-4 flex flex-col items-center pt-6">
+  <p className="mb-2">© 2024 Christmas.me. Tous droits réservés.</p>
+  <a
+    href="https://www.linkedin.com/in/leoneladagbe/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-500 hover:underline flex items-center"
+  >
+    Connectez-vous avec moi sur LinkedIn
+  </a>
+</footer>
+
     </div>
   );
 };
 
-export default ChristmasCard;
+export default ChristmasCard;
