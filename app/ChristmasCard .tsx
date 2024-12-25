@@ -358,6 +358,7 @@ Créez aussi votre carte personnalisée pour vos amis sur : https://christmas.le
           src={currentTemplate.image}
           alt="Christmas Background"
           className="w-full h-full object-cover"
+          sizes="100%"
           width={1000}
           height={1000}
         />
