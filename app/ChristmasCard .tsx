@@ -350,11 +350,12 @@ Créez aussi votre carte personnalisée pour vos amis sur : https://christmas.le
         className="relative mt-8 max-w-md w-full bg-black overflow-hidden shadow-xl"
         style={{ aspectRatio: "1 / 1" }}
       >
-        {/* Background Image */}
         <Image
           src={currentTemplate.image}
           alt="Christmas Background"
           className="w-full h-full object-cover"
+          width={1000}
+          height={1000}
         />
 
         {/* Name Overlay */}
