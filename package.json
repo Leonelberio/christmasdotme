@@ -12,6 +12,7 @@
     "html2canvas": "^1.4.1",
     "next": "15.1.2",
     "react": "^19.0.0",
+    "react-confetti": "^6.1.0",
     "react-dom": "^19.0.0",
     "react-tsparticles": "^2.12.2",
     "tsparticles": "^3.7.1"
