@@ -79,10 +79,14 @@ const ChristmasCard = () => {
     setShowConfetti(true);
     setTimeout(() => {
       setShowConfetti(false); // Stop Confetti after 5 seconds
-    }, 20000);
+    }, 10000);
     const preview = document.getElementById("preview");
+
     if (preview) {
+      const scale = window.devicePixelRatio; // Use devicePixelRatio for scaling
+
       html2canvas(preview, {
+        scale,
         useCORS: true, // Allow cross-origin images
         allowTaint: true, // Prevent image tainting
       }).then((canvas) => {
@@ -357,8 +361,8 @@ Créez aussi votre carte personnalisée pour vos amis sur : https://christmas.le
           src={currentTemplate.image}
           alt="Christmas Background"
           className="w-full h-full object-cover"
-          width={500}
-          height={500}
+          width={1000}
+          height={1000}
         />
 
         {/* Name Overlay */}
