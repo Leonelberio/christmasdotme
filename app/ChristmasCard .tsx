@@ -99,7 +99,7 @@ const ChristmasCard = () => {
       
 Créez aussi votre carte personnalisée pour vos amis sur : https://christmas.lesprosdelatech.com`;
 
-      html2canvas(preview, { scale: 2 }).then(async (canvas) => {
+      html2canvas(preview, { scale: 1 }).then(async (canvas) => {
         const dataUrl = canvas.toDataURL("image/png");
         const blob = await (await fetch(dataUrl)).blob();
         const file = new File([blob], "ChristmasCard.png", {
