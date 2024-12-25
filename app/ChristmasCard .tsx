@@ -87,8 +87,6 @@ const ChristmasCard = () => {
         scale: 1,
         useCORS: true, // Allow cross-origin images
         allowTaint: true, // Prevent image tainting
-        width: 1000,
-        height: 1000,
       }).then((canvas) => {
         const link = document.createElement("a");
         link.download = "ChristmasCard.png";
