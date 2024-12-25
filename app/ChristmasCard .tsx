@@ -83,10 +83,10 @@ const ChristmasCard = () => {
     const preview = document.getElementById("preview");
 
     if (preview) {
-      const scale = window.devicePixelRatio; // Use devicePixelRatio for scaling
+      const scale = window.devicePixelRatio || 2; // Use devicePixelRatio for scaling
 
       html2canvas(preview, {
-        scale,
+        scale: 1,
         useCORS: true, // Allow cross-origin images
         allowTaint: true, // Prevent image tainting
       }).then((canvas) => {
