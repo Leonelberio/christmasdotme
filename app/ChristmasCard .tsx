@@ -357,8 +357,8 @@ Créez aussi votre carte personnalisée pour vos amis sur : https://christmas.le
           src={currentTemplate.image}
           alt="Christmas Background"
           className="w-full h-full object-cover"
-          width={1000}
-          height={1000}
+          width={500}
+          height={500}
         />
 
         {/* Name Overlay */}
