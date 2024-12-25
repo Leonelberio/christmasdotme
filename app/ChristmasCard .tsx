@@ -99,7 +99,7 @@ const ChristmasCard = () => {
       
 Créez aussi votre carte personnalisée pour vos amis sur : https://christmas.lesprosdelatech.com`;
 
-      html2canvas(preview, { scale: 1 }).then(async (canvas) => {
+      html2canvas(preview, { scale: 2 }).then(async (canvas) => {
         const dataUrl = canvas.toDataURL("image/png");
         const blob = await (await fetch(dataUrl)).blob();
         const file = new File([blob], "ChristmasCard.png", {
@@ -348,19 +348,14 @@ Créez aussi votre carte personnalisée pour vos amis sur : https://christmas.le
       <div
         id="preview"
         className="relative mt-8 max-w-md w-full bg-black overflow-hidden shadow-xl"
-        style={{
-          width: "80vw",
-          height: "80vh",
-          maxWidth: "500px",
-          maxHeight: "500px",
-        }}
+        style={{ aspectRatio: "1 / 1" }}
       >
         <Image
           src={currentTemplate.image}
           alt="Christmas Background"
           className="w-full h-full object-cover"
-          width={1000}
-          height={1000}
+          width={500}
+          height={500}
         />
 
         {/* Name Overlay */}
