@@ -147,7 +147,7 @@ Créez aussi votre carte personnalisée pour vos amis sur : https://christmas.le
     }
   > = {
     template1: {
-      image: "/template 1.png",
+      image: "/template1.png",
       nameStyle: {
         width: "80%",
         position: "absolute",
@@ -173,7 +173,7 @@ Créez aussi votre carte personnalisée pour vos amis sur : https://christmas.le
       },
     },
     template2: {
-      image: "/template 2.png",
+      image: "/template2.png",
       nameStyle: {
         width: "80%",
         position: "absolute",
@@ -199,7 +199,7 @@ Créez aussi votre carte personnalisée pour vos amis sur : https://christmas.le
       },
     },
     template3: {
-      image: "/template 3.png",
+      image: "/template3.png",
       nameStyle: {
         width: "80%",
         position: "absolute",
@@ -225,7 +225,7 @@ Créez aussi votre carte personnalisée pour vos amis sur : https://christmas.le
       },
     },
     template4: {
-      image: "/template 4.png",
+      image: "/template4.png",
       nameStyle: {
         width: "80%",
         position: "absolute",
