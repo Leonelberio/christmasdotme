@@ -82,7 +82,11 @@ const ChristmasCard = () => {
     }, 20000);
     const preview = document.getElementById("preview");
     if (preview) {
-      html2canvas(preview, { scale: 2 }).then((canvas) => {
+      html2canvas(preview, {
+        scale: 2, // Increase the scale for higher resolution
+        useCORS: true, // Allow cross-origin images
+        allowTaint: true, // Prevent image tainting
+      }).then((canvas) => {
         const link = document.createElement("a");
         link.download = "ChristmasCard.png";
         link.href = canvas.toDataURL("image/png", 1.0);
@@ -354,8 +358,8 @@ Créez aussi votre carte personnalisée pour vos amis sur : https://christmas.le
           src={currentTemplate.image}
           alt="Christmas Background"
           className="w-full h-full object-cover"
-          width={500}
-          height={500}
+          width={1000}
+          height={1000}
         />
 
         {/* Name Overlay */}
