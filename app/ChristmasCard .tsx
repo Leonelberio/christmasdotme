@@ -348,7 +348,12 @@ Créez aussi votre carte personnalisée pour vos amis sur : https://christmas.le
       <div
         id="preview"
         className="relative mt-8 max-w-md w-full bg-black overflow-hidden shadow-xl"
-        style={{ aspectRatio: "1 / 1" }}
+        style={{
+          width: "80vw",
+          height: "80vh",
+          maxWidth: "500px",
+          maxHeight: "500px",
+        }}
       >
         <Image
           src={currentTemplate.image}
